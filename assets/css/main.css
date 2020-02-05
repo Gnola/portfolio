@@ -6,6 +6,13 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+.about-img {
+	width: 20rem;
+	height: 15rem;
+}
+#repo {
+	margin-bottom: 0;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -166,7 +173,8 @@ input, select, textarea {
 	a {
 		text-decoration: none;
 		color: inherit;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+		font-weight: 400;
+		/* border-bottom: dotted 1px rgba(128, 128, 128, 0.5); */
 		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
@@ -1984,15 +1992,33 @@ input, select, textarea {
 		margin-bottom: 40px;
 	}
 
+	.item:hover .des {
+		opacity: 1;
+		transition: .7s ease-in;
+		max-height: 500px;
+	}
+	.item-img {
+		height: 250px;
+	}
+
 		.item header {
 			background: #fff;
 			margin: 0;
-			padding: 1em 0 1em 0;
+			padding: 1.5em 0 0 0;
 			font-size: 0.8em;
+			overflow:hidden;
 		}
 
 			.item header h3 {
 				font-size: 1em;
+				font-weight: 400;
+			}
+			.des {
+				max-height: 0;
+				opacity: 0;
+				overflow: hidden;
+				transition: .7s ease-out;
+				font-size: .9em;
 			}
 
 /* Icons */
@@ -2253,6 +2279,7 @@ input, select, textarea {
 
 			#main > section.two {
 				background-color: #f5fafa;
+				padding-bottom: .5em;
 			}
 
 			#main > section.three {

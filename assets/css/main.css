@@ -17,9 +17,7 @@
 #lang {
 	font-style: italic;
 }
-#name {
-	text-decoration: underline;
-}
+
 #about-para {
 	font-size: .8em;
 	/* font-weight: 400; */

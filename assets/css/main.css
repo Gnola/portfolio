@@ -9,11 +9,21 @@
 .about-img {
 	width: 20rem;
 	height: 15rem;
+	margin-bottom: 1em;
 }
 #repo {
 	margin-bottom: 0;
 }
-
+#lang {
+	font-style: italic;
+}
+#name {
+	text-decoration: underline;
+}
+#about-para {
+	font-size: .8em;
+	/* font-weight: 400; */
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -212,7 +222,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 
 	br.clear {
@@ -1744,7 +1754,7 @@ input, select, textarea {
 		section > :last-child,
 		section > .container, section:last-child, article > :last-child,
 		article > .container, article:last-child {
-			margin-bottom: 0;
+			margin-bottom: 1em;
 		}
 
 		.row > section, .row > article {
@@ -2279,6 +2289,7 @@ input, select, textarea {
 				/* background-image: url("../../images/banner.jpg"); */
 				background-image: url("https://images.unsplash.com/photo-1471513671800-b09c87e1497c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
 				height: 60rem;
+				opacity: .9;
 			}
 
 			#main > section.two {
@@ -2288,6 +2299,7 @@ input, select, textarea {
 
 			#main > section.three {
 				background-color: #ecf1f1;
+				padding-top: 1em;
 			}
 
 			#main > section.four {

@@ -6,6 +6,18 @@
 
 (function($) {
 
+	// Show about me paragrap and toggle button text
+	var $aboutbtn = $('#about-button')
+	var $aboutpara = $('#about-para')
+	$aboutbtn.on('click', function() {
+		var $this = $(this)
+		$this.text(function(i, text){
+			return text === 'Read More' ? 'Read Less' : 'Read More';
+		})
+		$aboutpara.toggle($aboutbtn = 'Read Less'),
+		$aboutbtn.prop('value', 'Read Less')
+	})
+
 	var	$window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');

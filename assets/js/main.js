@@ -6,7 +6,56 @@
 
 (function($) {
 
-	// Show about me paragrap and toggle button text
+	// View Projects / Designs
+	var $viewprojects = $('#view-projects')
+	var $projects = $('.projects')
+	var $viewdesign = $('#view-designs')
+	var $designs = $('.designs')
+	var click = 0
+
+	$viewdesign.on('click', () => {
+		if (click === 0) {
+			$projects.slideToggle(1000, () => {
+				$designs.slideToggle(2000)
+			});
+			$viewdesign.css('font-weight', 'bold')
+			$viewprojects.css('font-weight', 'lighter')
+			click = 1
+		} else if (click === 1) {
+			return
+		}
+	})
+
+	$viewprojects.on('click', () => {
+		if (click === 1) {
+			$designs.slideToggle(1000, () => {
+				$projects.slideToggle(2000)
+			});
+			$viewdesign.css('font-weight', 'lighter')
+			$viewprojects.css('font-weight', 'bold')
+			click = 0
+		} else if (click === 0) {
+			return
+		}
+console.log(click);
+	})
+	// Modal
+	var $modalcontainer = $('#modal-container')
+	var $modal = $('#modal')
+	var $designimg = $('.design-img')
+	$designimg.on('click', function(){
+		$modal.css('background', 'url(' + this.src + ')')
+		$modal.css('display', 'block')
+		$modal.css('background-repeat', 'no-repeat')
+		$modal.css('background-size', 'contain')
+		$modal.css('background-position', 'center')
+		$modalcontainer.css('display', 'block')
+	})
+	$modalcontainer.on('click', function(){
+		$modalcontainer.css('display', 'none')
+	})
+
+	// Show about me paragraph and toggle button text
 	var $aboutbtn = $('#about-button')
 	var $aboutpara = $('#about-para')
 	$aboutbtn.on('click', function() {

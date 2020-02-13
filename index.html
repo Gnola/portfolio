@@ -53,7 +53,7 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <a href="#about">Gianni Nola</a>!</h2>
+								<h2 class="alt">Hi! I'm <a href="#about" class="scrolly active">Gianni Nola</a>!</h2>
 								<p> I am a software engineer based out of the Bay Area with a passion for delivering efficient code that helps people meet their goals.
 									<br>I enjoy bringing clarity to complex problems with a people first approach and find great satisfaction in being able to create positive change in people’s lives.</p>
 							</header>
@@ -69,12 +69,12 @@
 					<section id="portfolio" class="two">
 						<div class="container">
 
-							<header>
-								<h2>Projects</h2>
+							<header id="proj-des">
+								<h2 id="view-projects">Projects</h2> <h2 id="view-designs">Designs</h2>
 							</header>
 
 							<!-- <p>Here are a few of the projects I completed while enrolled in General Assembly's Remote Software Engineering Immersive course.</p> -->
-
+						<div class="projects">
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
@@ -132,12 +132,57 @@
 								</div>
 							</div>
 							<br>
-							<p id='repo'>View Repos</p>
-							<a class="repo-link" href="https://github.com/Gnola/MERN_Music/blob/master/README.md" target="_blank">Life's Music</a> |
-							<a class="repo-link" href="https://github.com/rbrown29/React-MusicApp/blob/master/README.md" target="_blank">Music App</a> |
-							<a class="repo-link" href="https://github.com/Derek-M-Davis/ontherocks/blob/master/README.md" target="_blank">onTheRocks</a> |
-							<a class="repo-link" href="https://github.com/Gnola/wedding-list/blob/master/README.md" target="_blank">Wedding Planner</a> |
-							<a class="repo-link" href="https://github.com/Gnola/Gnola.github.io/blob/master/news_app/README.md" target="_blank">Top News</a>
+							<h4 id='repo'>Repos</h4>
+							<div class="repos">
+								<a class="repo-link" href="https://github.com/Gnola/MERN_Music/blob/master/README.md" target="_blank">Life's Music</a> |
+								<a class="repo-link" href="https://github.com/rbrown29/React-MusicApp/blob/master/README.md" target="_blank">Music App</a> |
+								<a class="repo-link" href="https://github.com/Derek-M-Davis/ontherocks/blob/master/README.md" target="_blank">onTheRocks</a> |
+								<a class="repo-link" href="https://github.com/Gnola/wedding-list/blob/master/README.md" target="_blank">Wedding Planner</a> |
+								<a class="repo-link" href="https://github.com/Gnola/Gnola.github.io/blob/master/news_app/README.md" target="_blank">Top News</a>
+							</div>
+						</div>
+							<!-- <br> <br> <h2 id="view-designs">View Designs</h2> -->
+							<div class="designs">
+								<div class="one">
+									<div class="images">
+										<img src="images/header.png" alt="UF Header" class="design-img">
+										<p>Branding Header</p>
+									</div>
+									<div class="images">
+										<img src="images/branding.png" alt="Branding Option 1" class="design-img">
+										<p>Branding</p>
+									</div>
+								</div>
+								<div class="two">
+									<div class="images">
+										<img src="images/flashsale.png" alt="Flash Sale" class="design-img">
+										<p>Flash Sale</p>
+									</div>
+									<div class="images">
+										<img src="images/newclientspecial.png" alt="New Client Special Flyer" class="design-img">
+										<p>New Client Deal</p>
+									</div>
+								</div>
+								<div class="three">
+									<div class="images">
+										<img src="images/platypus.png" alt="Platypus Tours Flyer" class="design-img">
+										<p>Platypus Tours Flyer</p>
+									</div>
+									<div class="images">
+										<img src="images/UFfront.png" alt="General Info Flyer - Front" class="design-img">
+										<p>General Info Flyer - Front</p>
+									</div>
+									<div class="images">
+										<img src="images/UFback.png" alt="General Info Flyer - Back" class="design-img">
+										<p>General Info Flyer - Back</p>
+									</div>
+								</div>
+							</div>
+							<!-- <button id="view-designs">View Designs</button> -->
+							<!-- <h2 id="view-designs">View Designs</h2> -->
+							<div id="modal-container">
+								<div id="modal"></div>
+							</div>
 						</div>
 					</section>
 
@@ -153,7 +198,7 @@
 							<p>From personal trainer to full stack software engineer, my passion for helping others has remained a consistent passion of mine.</p>
 
 							<button type="button" id="about-button">Read More</button>
-							<p id="about-para">At a young age I discovered I had two passions; fitness and helping people. I realized that becoming a personal trainer would allow me to pursue a career that utilized my empathetic characteristics and satisfied both of my passions. As a personal trainer I continued to develop a strong skill set of communication, organization and empathy while constantly implementing intuitive ideas that improved the efficiency and effectiveness of my training. By utilizing the technology I had access to and understanding of I would create programs, templates and progression tracking for my clients and was able to solve my client’s problems, and deliver simple, effective solutions, while saving the company valuable resources. I was called on by my supervisor because of my proven ability to establish my teamwork and leadership qualities in previous projects, to lead an innovative project serving a wider variety of people who sought out help from me personally. My role as a trainer that implemented technology inspired me to learn more about how else I could influence people on a bigger stage and use technology to do it. I realized that I could do just that with the education and tools of a software engineer so I ended my training career and enrolled in a full-time immersive software engineering course through General Assembly. 16 weeks later I am a certified full stack software engineer and I couldn’t be happier. Although my career path has changed, my main passion for helping people has remained and I plan on continuing to learn how I can positively impact as many people as I can. As I launch my career as a software engineer I am looking to work with an innovative team that solves as many problems as possible within our society. <br><br>To read more about my transition check out my blog post <a href="https://www.linkedin.com/pulse/putting-one-foot-front-other-my-journey-becoming-full-stack-nola/" target="_blank">Putting One Foot in Front of the Other: My Journey to Becoming a Full-Stack Software Engineer</a></p>
+							<p id="about-para">At a young age I discovered I had two passions; fitness and helping people. I realized that becoming a personal trainer would allow me to pursue a career that utilized my empathetic characteristics and satisfied both of my passions. As a personal trainer I continued to develop a strong skill set of communication, organization and empathy while constantly implementing intuitive ideas that improved the efficiency and effectiveness of my training. By utilizing the technology I had access to and understanding of I would create programs, templates and progression tracking for my clients and was able to solve my client’s problems, and deliver simple, effective solutions, while saving the company valuable resources. I was called on by my supervisor because of my proven ability to establish my teamwork and leadership qualities in previous projects, to lead an innovative project serving a wider variety of people who sought out help from me personally. My role as a trainer that implemented technology inspired me to learn more about how else I could influence people on a bigger stage and use technology to do it. I realized that I could do just that with the education and tools of a software engineer so I ended my training career and enrolled in a full-time immersive software engineering course through General Assembly. 16 weeks later I am a certified full stack software engineer and I couldn’t be happier. Although my career path has changed, my main passion for helping people has remained and I plan on continuing to learn how I can positively impact as many people as I can. As I launch my career as a software engineer I am looking to work with an innovative team that solves as many problems as possible within our society. <br>To read more about my transition check out my blog post <a href="https://www.linkedin.com/pulse/putting-one-foot-front-other-my-journey-becoming-full-stack-nola/" target="_blank">Putting One Foot in Front of the Other: My Journey to Becoming a Full-Stack Software Engineer</a></p>
 
 						</div>
 					</section>
@@ -191,8 +236,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<p>Gianni Nola</p>
-						<li><a href="https://www.linkedin.com/in/gianni-nola/" target="_blank">LinkedIn</a></li><li><a href="https://github.com/Gnola"  target="_blank">Github</a></li><li><a href="#" download target="_blank">Resume</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li><a href="https://www.linkedin.com/in/gianni-nola/" target="_blank">LinkedIn</a></li><li><a href="https://github.com/Gnola"  target="_blank">Github</a></li><li><a href="#" download target="_blank">Resume</a></li><br>Designed by: <span id="name">Gianni Nola</span> using <a href="http://html5up.net">HTML5 UP</a>
 					</ul>
 
 			</div>

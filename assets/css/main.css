@@ -1894,7 +1894,9 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-			width: 100%;
+      width: 100%;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
 		}
 
 		.image.avatar48 {
@@ -2123,7 +2125,9 @@ input, select, textarea {
 /* Item */
 
 	.item {
-		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05); */
+    box-shadow: 5px 6px 13px 4px rgba(0,0,0,0.33);
+    border-radius: 10px;
 		margin-bottom: 40px;
 	}
 
@@ -2140,12 +2144,14 @@ input, select, textarea {
 			background: #fff;
 			margin: 0;
 			padding: 1.5em 0 0 0;
-			font-size: 0.8em;
+      font-size: 0.8em;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px; 
 			overflow:hidden;
 		}
 
 			.item header h3 {
-				font-size: 1em;
+				font-size: 1.2em;
 				font-weight: 400;
 			}
 			.des {
@@ -2503,7 +2509,8 @@ input, select, textarea {
 		/* Item */
 
 			.item {
-				margin-bottom: 20px;
+        margin-bottom: 20px;
+        box-shadow: 5px 6px 13px 4px rgba(0,0,0,0.33);
 			}
 
 		/* Header */

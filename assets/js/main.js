@@ -1,44 +1,130 @@
-/*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	// View Projects / Designs
-	var $viewprojects = $('#view-projects')
+  var $viewwork = $('#view-work')
+  var $viewprojects = $('#view-projects')
+  var $viewdesign = $('#view-designs')
+  
+  var $work = $('.work')
 	var $projects = $('.projects')
-	var $viewdesign = $('#view-designs')
-	var $designs = $('.designs')
-	var click = 0
+  var $designs = $('.designs')
 
-	$viewdesign.on('click', () => {
-		if (click === 0) {
-			$projects.slideToggle(1000, () => {
-				$designs.slideToggle(2000)
-			});
-			$viewdesign.css('font-weight', 'bold')
-			$viewprojects.css('font-weight', 'lighter')
-			click = 1
-		} else if (click === 1) {
-			return
-		}
-	})
+  var click = 0;
 
-	$viewprojects.on('click', () => {
-		if (click === 1) {
-			$designs.slideToggle(1000, () => {
-				$projects.slideToggle(2000)
-			});
-			$viewdesign.css('font-weight', 'lighter')
-			$viewprojects.css('font-weight', 'bold')
-			click = 0
-		} else if (click === 0) {
-			return
-		}
-console.log(click);
-	})
+  var currentPage = 'projects';
+  var previousPage = 'projects';
+  var pageQueue = ['projects'];
+
+  const changePage = (page) => {
+    if (currentPage === page) {
+      return
+    }
+    pageQueue.push(page)
+    for (let i = 0; i < pageQueue.length; i++) {
+      currentPage = pageQueue[i]
+      previousPage = pageQueue[i - 1]
+    }
+    console.log('current:' + currentPage);
+    console.log('previous:' + previousPage);
+
+    if (page === 'work') {
+      $viewwork.css('font-weight', 'bold')
+      $viewdesign.css('font-weight', 'lighter')
+      $viewprojects.css('font-weight', 'lighter')
+      if (previousPage === 'projects') {
+        $projects.slideToggle(1000, () => {
+          $work.slideToggle(2000)
+        });
+      } else if (previousPage === 'designs')
+        $designs.slideToggle(1000, () => {
+          $work.slideToggle(2000)
+        });
+    } else if (page === 'projects') {
+      $viewprojects.css('font-weight', 'bold')
+      $viewwork.css('font-weight', 'lighter')
+      $viewdesign.css('font-weight', 'lighter')
+      if (previousPage === 'designs') {
+        $designs.slideToggle(1000, () => {
+          $projects.slideToggle(2000)
+        });
+      } else if (previousPage === 'work')
+        $work.slideToggle(1000, () => {
+          $projects.slideToggle(2000)
+        });
+    } else if (page === 'designs') {
+      $viewdesign.css('font-weight', 'bold')
+      $viewwork.css('font-weight', 'lighter')
+      $viewprojects.css('font-weight', 'lighter')
+      if (previousPage === 'projects') {
+        $projects.slideToggle(1000, () => {
+          $designs.slideToggle(2000)
+        });
+      } else if (previousPage === 'work')
+        $work.slideToggle(1000, () => {
+          $designs.slideToggle(2000)
+        });
+    }
+  }
+
+  $viewwork.on('click', () => {
+    changePage('work')
+  })
+  $viewprojects.on('click', () => {
+    changePage('projects')
+  })
+  $viewdesign.on('click', () => {
+    changePage('designs')
+  })
+
+
+  // $viewwork.on('click', () => {
+  //   console.log(click);
+  //   if (click === -1) {
+  //     $work.slideToggle(1000, () => {
+  //       $designs.slideToggle(2000)
+  //     });
+  //     $viewwork.css('font-weight', 'bold')
+  //     $viewprojects.css('font-weight', 'lighter')
+  //     $viewdesign.css('font-weight', 'lighter')
+  //     click = -1
+  //   } else if (click === 1 || click === 0) {
+  //     return
+  //   }
+  // })
+
+  // $viewprojects.on('click', () => {
+  //   console.log(click);
+  //   if (click === 1) {
+  //     $designs.slideToggle(1000, () => {
+  //       $projects.slideToggle(2000)
+  //     });
+  //     $viewdesign.css('font-weight', 'lighter')
+  //     $viewprojects.css('font-weight', 'bold')
+  //     click = 0
+  //     console.log(click);
+
+  //   } else if (click === 0) {
+  //     return
+  //   }
+  // })
+
+	// $viewdesign.on('click', () => {
+  //   console.log(click);
+	// 	if (click === 0) {
+	// 		$projects.slideToggle(1000, () => {
+	// 			$designs.slideToggle(2000)
+	// 		});
+	// 		$viewdesign.css('font-weight', 'bold')
+	// 		$viewprojects.css('font-weight', 'lighter')
+  //     click = 1
+  //     console.log(click);
+
+	// 	} else if (click === 1) {
+	// 		return
+	// 	}
+	// })
+
+
 	// Modal
 	var $modalcontainer = $('#modal-container')
 	var $modal = $('#modal')

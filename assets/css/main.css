@@ -24,6 +24,22 @@
       transition: .2s ease-in;
     }
 
+.unavailable {
+	display: flex;
+	flex-direction: column;
+}
+
+.unavailable > p {
+	margin-top: 10vh;
+	font-weight: bold;
+	z-index: 3;
+	font-size: 1.8rem;
+}
+.unavailable > a {
+	margin-top: -17vh;
+	opacity: .2;
+}
+
 /* Work */
 .work {
   display: flex;
@@ -1919,7 +1935,7 @@ input, select, textarea {
       border-top-right-radius: 2px;
       border-top-left-radius: 2px;
     }
-    
+
     .work-img {
       display: block;
       width: 100%;
@@ -2194,7 +2210,7 @@ input, select, textarea {
 			padding: 1.5em 0 0 0;
       font-size: 0.8em;
       border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px; 
+      border-bottom-right-radius: 2px;
 			overflow:hidden;
 		}
 
@@ -2857,7 +2873,7 @@ input, select, textarea {
 				}
 
   }
-  
+
 /* MY EDITS */
 
   .skills-div {

@@ -2902,3 +2902,13 @@ input, select, textarea {
     font-style: italic;
     font-size: 1rem;
   }
+
+/* Styling for Mark Website */
+article.item > header.smaller-header {
+	padding-top: 0;
+}
+article.item > header.smaller-header > h3 {
+	line-height: 1;
+	width: 80%;
+	margin: 2.5vh auto -.5vh;
+}
